@@ -1,0 +1,33 @@
+{
+  "name": "@jobber-micro/sheared",
+  "version": "0.0.1",
+  "description": "This is a sheared lib for jobber micro service app",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build/**/*"
+  ],
+  "scripts": {
+    "clean": "npx rimraf ./build",
+    "build": "npm run clean && tsc",
+    "pub": "npm run build && git add . && git commit -m \"Updates\" && npm version patch && npm run build && npm publish --access public"
+  },
+  "keywords": [],
+  "author": "Saurav Majumdar",
+  "license": "ISC",
+  "dependencies": {
+    "@elastic/elasticsearch": "^8.10.0",
+    "cloudinary": "^1.41.0",
+    "express": "^4.18.2",
+    "http-status-codes": "^2.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.1",
+    "typescript": "^5.2.2",
+    "winston": "^3.11.0",
+    "winston-elasticsearch": "^0.17.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.5"
+  }
+}
