@@ -13,8 +13,8 @@ export {
   IReduxLogout,
   IAuthResponse,
   IAuthUser,
-} from './auth.interface';
-export { IBuyerDocument, IReduxBuyer } from './buyer.interface';
+} from './interfaces/auth.interface';
+export { IBuyerDocument, IReduxBuyer } from './interfaces/buyer.interface';
 export {
   IConversationDocument,
   IMessageDocument,
@@ -23,7 +23,7 @@ export {
   IChatSellerProps,
   IChatBuyerProps,
   IChatMessageProps,
-} from './chat.interface';
+} from './interfaces/chat.interface';
 export {
   GigType,
   ICreateGig,
@@ -35,7 +35,7 @@ export {
   IGigViewReviewsProps,
   IGigInfo,
   IGigTopProps,
-} from './gig.interface';
+} from './interfaces/gig.interface';
 export {
   IOrderNotifcation,
   IOffer,
@@ -45,14 +45,14 @@ export {
   IOrderReview,
   IOrderMessage,
   IOrderDocument,
-} from './order.interface';
+} from './interfaces/order.interface';
 export {
   IReviewMessageDetails,
   IRatingTypes,
   IRatingCategories,
   IRatingCategoryItem,
   IReviewDocument,
-} from './review.interface';
+} from './interfaces/review.interface';
 export {
   ISearchResult,
   IHitsTotal,
@@ -60,7 +60,7 @@ export {
   IQueryString,
   ITerm,
   IPaginateProps,
-} from './search.interface';
+} from './interfaces/search.interface';
 export {
   SellerType,
   ILanguage,
@@ -68,9 +68,9 @@ export {
   IEducation,
   ICertificate,
   ISellerDocument,
-} from './seller.interface';
-export { IEmailLocals } from './email.interface';
-export { uploads, videoUpload } from './cloudinary-upload';
+} from './interfaces/seller.interface';
+export { IEmailLocals } from './interfaces/email.interface';
+export { uploads, videoUpload } from './interfaces/cloudinary-upload';
 export {
   IErrorResponse,
   IError,
@@ -81,13 +81,13 @@ export {
   FileTooLargeError,
   ServerError,
   ErrnoException
-} from './error-handler';
-export { verifyGatewayRequest } from './gateway-middleware';
-export { winstonLogger } from './logger';
+} from './interfaces/error-handler';
+export { verifyGatewayRequest } from './interfaces/gateway-middleware';
+export { winstonLogger } from './interfaces/logger';
 export {
   firstLetterUppercase,
   lowerCase,
   toUpperCase,
   isEmail,
   isDataURL
-} from './helpers';
+} from './interfaces/helpers';
