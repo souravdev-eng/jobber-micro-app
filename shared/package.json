@@ -1,6 +1,6 @@
 {
   "name": "@jobber-micro/sheared",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "This is a sheared lib for jobber micro service app",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
