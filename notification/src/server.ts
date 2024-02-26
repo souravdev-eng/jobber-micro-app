@@ -2,9 +2,12 @@ import 'express-async-errors';
 import http from 'http'
 import { Logger } from 'winston';
 import { Application } from 'express';
-import { config } from '@notifications/config';
 import { winstonLogger } from '@jobber-micro/sheared';
-import { healthRoutes } from './routes';
+
+import { config } from '@notifications/config';
+import { healthRoutes } from '@notifications/routes';
+import { checkConnection } from '@notifications/elasticsearch';
+import { createConnection } from '@notifications/queues/connection';
 
 const SERVER_PORT = 4001;
 const log: Logger = winstonLogger(`${config.ELASTIC_SEARCH_URL}`, 'notificationServer', 'debug')
@@ -18,11 +21,11 @@ export const start = (app: Application): void => {
 }
 
 const startQueues = async (): Promise<void> => {
-    // 
+    await createConnection()
 }
 
 const elasticSearch = (): void => {
-    // 
+    checkConnection()
 }
 
 const startServer = (app: Application): void => {
